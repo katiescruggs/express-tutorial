@@ -16,8 +16,16 @@ app.use(urlLogger, timeLogger);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.get('/', (request, response) => {
+//   response.sendFile(path.join(__dirname + 'public'));
+// });
+
 app.get('/json', (request, response) => {
   response.status(200).json({"name": "Katie"});
+});
+
+app.get('/sunsets', (request, response) => {
+  response.status(200).sendFile('sunsets.html', { root: 'public' });
 });
 
 app.listen(3000, () => {
