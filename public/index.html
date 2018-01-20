@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Intro</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>My Static File</h1>
+    <button>0</button>
+    <script>
+      const btn = document.querySelector('button');
+      let counter = 0;
+
+      btn.addEventListener('click', () => {
+        counter++;
+        btn.innerText = counter;
+      });
+
+    </script>
+  </body>
+</html>
