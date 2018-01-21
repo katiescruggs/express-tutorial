@@ -32,3 +32,7 @@ app.listen(3000, () => {
   console.log('Express intro running on localhost:3000');
 });
 
+app.use(function (req, res, next) {
+  res.status(404).send("Page does not exist! Check out some sunsets at localhost:3000/sunsets instead.");
+});
+
